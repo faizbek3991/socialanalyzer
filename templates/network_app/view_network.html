@@ -1,0 +1,23 @@
+{% extends "network_app/base.html" %}
+
+{% block title %}Network Visualization{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="my-4">Network Visualization</h2>
+    <div class="network-graph">
+        <img src="data:image/png;base64,{{ graphic }}" alt="Network Graph">
+    </div>
+    
+    <div class="legend mt-4">
+        <h4>Connection Types:</h4>
+        <ul>
+            <li><span style="color: green;">●</span> Friend</li>
+            <li><span style="color: red;">●</span> Family</li>
+            <li><span style="color: blue;">●</span> Colleague</li>
+            <li><span style="color: gray;">●</span> Other</li>
+        </ul>
+        <p>Note: Line thickness represents connection strength (1-5)</p>
+    </div>
+</div>
+{% endblock %}

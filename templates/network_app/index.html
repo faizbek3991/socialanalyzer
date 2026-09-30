@@ -1,0 +1,21 @@
+{% extends "network_app/base.html" %}
+
+{% block title %}Home - Social Network{% endblock %}
+
+{% block content %}
+<h1>People in Network</h1>
+<div class="row">
+    {% for person in people %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ person.name }}</h5>
+                <p class="card-text">{{ person.profession }}</p>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No people in the network yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}
